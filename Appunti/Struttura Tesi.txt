@@ -1,0 +1,25 @@
+STRUTTURA TESI
+
+
+1 Introduzione 1
+1.1 Motivazioni . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Lavori Correlati . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2.1 LoCoMoTiVE . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3 Organizzazione della Tesi . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+2 Linguaggi visuali 2
+3 Local Context 3
+3.1 Sintassi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.2 Semantica . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+4 TiveJS 4
+4.1 Introduzione . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.2 Funzionamento . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.3 Implementazione . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.3.1 Tecnologie usate . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+5 Contesti d’utilizzo 5
+5.1 Entitiy Relationship . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+5.2 Flowchart . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+5.3 Tree . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+6 Conclusioni 6
+6.1 Sviluppi futuri . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+7 Ringraziamenti 7
+Bibliografia
