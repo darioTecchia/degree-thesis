@@ -11,7 +11,7 @@
         \newline
         Il client è formato dalla piattaforma draw.io, opportunamente modifica, per la creazione di sentenze visuali.
         Il server è stato implementato in Java utilizzando i servlet per il riconoscimento e la traduzione delle sentenze visuali.
-        Il funzionamento è molto semplice, il client esegue una chiamata HTTP di tipo POST contenute al suo interno un grafo o un diagramma, creato attraverso l'utilizzo di simboli ad hoc, in formato XML. Una volta ricevuta la sentenza visuale, il server la interpreta applicando le definizioni per poi restituire la traduzione semantica oppure dei messaggi di errore.
+        Il funzionamento è molto semplice, il client esegue una chiamata HTTP di tipo POST contenute al suo interno un grafo o un diagramma, creato attraverso l'utilizzo di simboli ad hoc, in formato XML.~Una volta ricevuta la sentenza visuale, il server la interpreta applicando le definizioni per poi restituire la traduzione semantica oppure dei messaggi di errore.
         \newline
         Le motivazioni che ci hannno portato alla creazione di un nuovo tool sono varie: rendere l'applicazione più scalabile e più veloce limitando l'interazione con il server a semplici accessi a pagine statiche; l'aggiornamento di TiVe all'ultima versione di draw.io.
         Essendo il core di TiveJS scritto completamente in JavaScript ora si integra perfettamente con la piattaforma estesa e con la manipolazione del grafo.
@@ -36,7 +36,7 @@
 
         \subsection{LoCoMoTiVE}
             
-            All'attuale stato dell'arte troviamo l'ecosistema LoCoMoTiVE, ovvero un'unione di due software, LoCoModeler e Tive. Presentato in \cite{extending_localcontext} e \cite{localcontext}, questo tool permette l'analisi semantica basata sul contesto locale, vista nel dettaglio nel capitolo~\ref{ch:chapter3}. Nei prossimi due paragrafi andrò ad illustrare singolarmente i due componenti di cui è composto.
+            All'attuale stato dell'arte troviamo l'ecosistema LoCoMoTiVE, ovvero un'unione di due software, LoCoModeler e Tive. Presentato in~\cite{extending_localcontext} e~\cite{localcontext}, questo tool permette l'analisi semantica basata sul contesto locale, vista nel dettaglio nel capitolo~\ref{ch:chapter3}. Nei prossimi due paragrafi andrò ad illustrare singolarmente i due componenti di cui è composto.
 
             \newpage
 
@@ -72,7 +72,7 @@
 
                 Una volta definito il linguaggio, i diagrammi possono essere composti utilizzando i simboli e i connettori definiti nella sua specifica. Questo può essere fatto attraverso un editor grafico TiVE, che è un'applicazione web che consente la composizione di diagrammi direttamente dal browser web.
                 \newline
-                Come mostrato nella Figura \ref{fig:tive}, l'applicazione è costituita da tre sezioni principali:
+                Come mostrato nella Figura~\ref{fig:tive}, l'applicazione è costituita da tre sezioni principali:
                 \begin{itemize}
                     \item Nella toolbar a sinistra troviamo la palette dei simboli e connettori utlizzabili per la creazione dei diagrammi.
                     \item Nella zona centrale troviamo l'area di lavoro dove è possibile comporre i diagrammi trascinando gli elementi contenuti nella toolbar di sinistra.
