@@ -25,6 +25,10 @@ if [ $1 = $clean ]; then
 	rm -rf *.out*
 	rm -rf *.nlo
 	rm -rf *.nls
+	rm -rf *.fdb_latexmk
+	rm -rf *.run.xml
+	rm -rf *.gz
+	rm -rf *.bcf
 	rm -rf $filename.pdf
 	rm -rf $filename.ps
 	rm -rf $filename.dvi
