@@ -1,0 +1,19 @@
+<language name="binaryTree">
+
+    <token name="root" ref="circle.svg" occurrences="==1">
+        <ap type="enter" name="in" ref="hiSC" connectNum="==0"/>
+        <ap type="exit" name="out" ref="lowSC" connectNum="==2"/>
+    </token>
+
+    <token name="node" ref="circle.svg" occurrences=">=0">
+        <ap type="enter" name="in" ref="hiSC" connectNum="==1"/>
+        <ap type="exit" name="out" ref="lowSC" connectNum="==2"/>
+    </token>
+
+    <connector ref="polyline">
+        <cap type="exit" ref="p0" connectNum="==1" />
+        <cap type="enter" ref="p1" connectNum="==1" />
+    </connector>
+    
+    <constraint>connected</constraint>
+</language>

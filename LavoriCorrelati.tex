@@ -2,14 +2,14 @@
     Il mio lavoro di tesi, essendo principalmente un porting ed una rivisitazione, si basa su strumenti precedentemente sviluppati.
     Gli strumenti in questione sono descritti nel dettaglio nei seguenti sottoparagrafi.
 
-    \section{draw.io e mxGraph}
+    \section{Draw.io e mxGraph}
 
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[scale=0.17]{Figure/drawio.png}
-        \caption{Schermata di draw.io}
-        \label{fig:drawio}
-    \end{figure}
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[scale=0.17]{Figure/drawio.png}
+            \caption{Schermata di draw.io}
+            \label{fig:drawio}
+        \end{figure}
 
         TiveJS, è basato su draw.io, un'applicazione web gratis che permette agli utenti di creare diagrammi e grafi direttamente dal proprio browser web, mostrato in figura \ref{fig:drawio}. Ha un'integrazione con Google Drive e Dropbox per il salvataggio di dati che può avvenire anche con l'ausilio del localStorage del browser o attraverso il salvataggio di file sulla macchina. Draw.io è basato sulla libreria mxGraph.
         \newline
@@ -57,3 +57,26 @@
                 \item Nella zona centrale troviamo l'area di lavoro dove è possibile comporre i diagrammi trascinando gli elementi contenuti nella toolbar di sinistra.
                 \item A destra troviamo la Console dove verrà mostrata la traduzione semantica o la lista di errori nel caso in cui si verificassero.
             \end{itemize}
+
+    \section{DrawSE}
+        DrawSE è un'estensione di draw.io che permette la creazione di diagrammi con simboli altamente personalizzati. Le principali caratteristice di drawSE sono le due modalità di editing: una per la creazione di simboli (\textit{Shape Mode}) e una per la definizione dei punti d'attacco\footnote{Dove gli archi andranno ad attaccarsi sulla figura.} dei simboli (\textit{AP Mode}).
+        Le due modalità sono attivabili attraverso il selettore mostrato in figura \ref{fig:mode_switch}
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[scale=0.7]{Figure/mode_switch.png}
+            \caption{Switch per la selezione della modalità in drawSE}
+            \label{fig:mode_switch}
+        \end{figure}
+        \newline
+        La \textit{Shape Mode} permette la creazione di nuovi simboli e di personalizzarli in base al colore, lo spessore delle linee e così via. Un simbolo può essere formato anche dall'unione di più simboli semplici.
+        Nella \textit{AP Mode}, drawSE fornisce una palette con sette strumenti utili alla definizione degli \textit{attaching point} del simbolo. Il punto d'attacco può essere composto da sette diverse forme geometriche:
+        \begin{itemize}
+            \item un punto
+            \item una linea retta
+            \item una linea curva
+            \item un'area rettangolare
+            \item un'area ellittica
+            \item un contorno rettangolare
+            \item un contorno ellittico
+        \end{itemize}
+        Altra funzionalità di drawSe è la crazione di set di simboli personalizzati o \textit{custom palette}, ovvero un insieme dei simboli creati grazie alle due modalità specificate prima. Lo strumento è spiegato nel dettaglio in \cite{drawSE}. TiveJS fa uso delle palette generate in drawSE.

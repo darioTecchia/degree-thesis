@@ -144,7 +144,7 @@ tabsize=3
 \input{Preamble/preamble}
 
 % \titleformat{\chapter}[chapter]{\filleft\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
-
+\pagenumbering{roman}
 \begin{document}
 \selectlanguage{italian}
 
@@ -186,9 +186,12 @@ tabsize=3
 
 \listoffigures
 
+\listoftables
+
 % ******************************** Main Matter *********************************
 
 \mainmatter
+\pagenumbering{arabic}
 
 \include{Introduzione}
 
@@ -206,10 +209,12 @@ tabsize=3
 
 % ********************************** Appendices ********************************
 
+% ********************************** Appendices ********************************
+
 \begin{appendices} % Using appendices environment for more functionality
 
-\include{Appendix1/appendix1}
-
+    \include{Appendix1/appendix1}
+    
 \end{appendices}
 
 % ********************************** Back Matter *******************************
