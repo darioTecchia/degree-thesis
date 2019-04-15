@@ -9,13 +9,13 @@
     \section{Motivazioni}
         La piattaforma già esistente, LoCoMoTiVE, si basa su un meccanisco client-server.
         \newline
-        Il client è formato dalla piattaforma draw.io, opportunamente modifica, per la creazione di sentenze visuali.
+        Il client è formato dalla piattaforma draw.io, opportunamente modificata, per la creazione di sentenze visuali.
         Il server è stato implementato in Java utilizzando i servlet per il riconoscimento e la traduzione delle sentenze visuali.
-        Il funzionamento è molto semplice, il client esegue una chiamata HTTP di tipo POST contenute al suo interno un grafo o un diagramma, creato attraverso l'utilizzo di simboli ad hoc, in formato XML.~Una volta ricevuta la sentenza visuale, il server la interpreta applicando le definizioni per poi restituire la traduzione semantica oppure dei messaggi di errore.
+        Il funzionamento è molto semplice: il client esegue una chiamata HTTP di tipo POST contenute al suo interno un grafo o un diagramma, creato attraverso l'utilizzo di simboli ad hoc, in formato XML.~Una volta ricevuta la sentenza visuale, essa è interpretata dal server che applica le definizioni per poi restituire la traduzione semantica oppure dei messaggi di errore.
         \newline
-        Le motivazioni che ci hannno portato alla creazione di un nuovo tool sono varie: rendere l'applicazione più scalabile e più veloce limitando l'interazione con il server a semplici accessi a pagine statiche; l'aggiornamento di TiVe all'ultima versione di draw.io.
+        Le motivazioni che hanno portato alla creazione di un nuovo tool sono varie: rendere l'applicazione più scalabile e più veloce limitando l'interazione con il server a semplici accessi a pagine statiche; l'aggiornamento di TiVe all'ultima versione di draw.io.
         Essendo il core di TiveJS scritto completamente in JavaScript ora si integra perfettamente con la piattaforma estesa e con la manipolazione del grafo.
-        Le definizioni dei linguaggi ora sono definite in formato JSON rendendo ancora più alta l'interoperabilità dei sistemi. 
+        Le definizioni dei linguaggi ora sono in formato JSON rendendo ancora più alta l'interoperabilità dei sistemi. 
 
     \section{Organizzazione della Tesi}
         Nel capitolo 2 illustrerò i lavori correlati al mio progetto di tesi.

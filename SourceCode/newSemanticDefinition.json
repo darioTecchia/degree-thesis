@@ -1,0 +1,43 @@
+{
+    "language": {
+        "semantic": [
+            {
+                "property": [
+                    {
+                        "action": "print(@Desc + '\\n')"
+                    }
+                ],
+                "visit": {
+                    "path": [
+                        {
+                            "_value": "(#attType='exit')::EDGE/NODE",
+                            "_flag": "D"
+                        }
+                    ],
+                    "_priority": "0",
+                    "_order": "1"
+                },
+                "_ref": "ROOT"
+            },
+            {
+                "property": [
+                    {
+                        "action": "print(@Desc + '\\n')"
+                    }
+                ],
+                "visit": {
+                    "path": [
+                        {
+                            "_value": "(#attType='exit')::EDGE/NODE",
+                            "_flag": "D"
+                        }
+                    ],
+                    "_priority": "0",
+                    "_order": "2"
+                },
+                "_ref": "NODE"
+            }
+        ],
+        "_name": "tree"
+    }
+}
