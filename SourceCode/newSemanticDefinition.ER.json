@@ -1,0 +1,101 @@
+{
+    "language": {
+        "semantic": [
+            {
+                "property": [
+                    {
+                        "_name": "$Key",
+                        "_type": "list<string>",
+                        "procedure": [
+                            {
+                                "_postCondition": "$Key.length > 0",
+                                "_name": "add",
+                                "_path": "CON_E_A/KEY_ATTR",
+                                "_param": "@KeyName"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$Attributes",
+                        "_type": "list<string>",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "add",
+                                "_path": "CON_E_A/ATTRIBUTE",
+                                "_param": "@AttrName"
+                            },
+                            {
+                                "_postCondition": "",
+                                "_name": "addAll",
+                                "_path": "CON_E_R[@Cardin = '([01],1)']/RELATION",
+                                "_param": "$Attributes"
+                            }
+                        ]
+                    },
+                    {
+                        "action": "print(@EntName + ' (<u>' + $Key.join(', ') + '</u>');if($Attributes.length > 0) { print(', ' + $Attributes.join(', ')); } print(')\\n');"
+                    }
+                ],
+                "_ref": "entity"
+            },
+            {
+                "property": [
+                    {
+                        "_name": "$Key",
+                        "_type": "list<string>",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "addAll",
+                                "_path": "CON_E_R[@Cardin='([01],N)']/ENTITY",
+                                "_param": "$Key"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$Attributes",
+                        "_type": "list<string>",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "add",
+                                "_path": "CON_R_A/ATTRIBUTE",
+                                "_param": "@AttrName"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$Entities",
+                        "_type": "list<string>",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "add",
+                                "_path": "CON_E_R[@Cardin='([01],N)']/ENTITY",
+                                "_param": "@EntName"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$KeyAttrs",
+                        "_type": "list<string>",
+                        "procedure": [
+                            {
+                                "_postCondition": "$KeyAttrs.length == 0",
+                                "_name": "add",
+                                "_path": "CON_R_A/KEY_ATTR",
+                                "_param": "@KeyName"
+                            }
+                        ]
+                    },
+                    {
+                        "action": "if($Entities.length == 2) { print(@RelName + ' (<u>' + $Key.join(', ') + '</u>' ); if($Attributes.length > 0) { print( ', ' + $Attributes.join(', ') );}print(')\\n');}"
+                    }
+                ],
+                "_ref": "relation"
+            }
+        ],
+        "_name": "EntityRelationship"
+    }
+}

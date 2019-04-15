@@ -1,0 +1,145 @@
+{
+	"language": {
+		"token": [
+			{
+				"ap": [
+					{
+						"_type": "enter",
+						"_name": "IN",
+						"_ref": "Up",
+						"_connectNum": ">=1"
+					}
+				],
+				"_name": "END",
+				"_ref": "TriangleUp",
+				"_occurrences": "==1"
+			},
+			{
+				"ap": [
+					{
+						"_type": "enter",
+						"_name": "IN",
+						"_ref": "Up",
+						"_connectNum": ">=1"
+					},
+					{
+						"_type": "exit",
+						"_name": "OUT",
+						"_ref": "Down",
+						"_connectNum": "==1"
+					}
+				],
+				"text": [
+					{
+						"_graphicRef": "Center",
+						"_name": "Code",
+						"_type": "string"
+					}
+				],
+				"_name": "IO",
+				"_ref": "Parallelogram",
+				"_occurrences": ">=0"
+			},
+			{
+				"ap": [
+					{
+						"_type": "enter",
+						"_name": "IN",
+						"_ref": "Up",
+						"_connectNum": ">=1"
+					},
+					{
+						"_type": "exit",
+						"_name": "OUT",
+						"_ref": "Down",
+						"_connectNum": "==1"
+					}
+				],
+				"text": [
+					{
+						"_graphicRef": "Center",
+						"_name": "Code",
+						"_type": "string"
+					}
+				],
+				"_name": "STAT",
+				"_ref": "Rectangle",
+				"_occurrences": ">=0"
+			},
+			{
+				"ap": [
+					{
+						"_type": "exit",
+						"_name": "OUT",
+						"_ref": "Down",
+						"_connectNum": "==1"
+					}
+				],
+				"_name": "BEGIN",
+				"_ref": "TriangleDOWN",
+				"_occurrences": "==1"
+			},
+			{
+				"ap": [
+					{
+						"_type": "enter",
+						"_name": "IN",
+						"_ref": "Up",
+						"_connectNum": ">=1"
+					},
+					{
+						"_type": "exit",
+						"_name": "FOUT",
+						"_ref": "Left",
+						"_connectNum": "==1"
+					},
+					{
+						"_type": "exit",
+						"_name": "TOUT",
+						"_ref": "Right",
+						"_connectNum": "==1"
+					}
+				],
+				"text": [
+					{
+						"_graphicRef": "Center",
+						"_name": "Cond",
+						"_type": "string"
+					}
+				],
+				"_name": "PRED",
+				"_ref": "Rumble",
+				"_occurrences": ">=0"
+			}
+		],
+		"connector": [
+			{
+				"ap": [
+					{
+						"_type": "exit",
+						"_name": "Tail",
+						"_ref": "Tail",
+						"_connectNum": "==1"
+					},
+					{
+						"_type": "enter",
+						"_name": "Head",
+						"_ref": "Head",
+						"_connectNum": "==1"
+					}
+				],
+				"text": [
+					{
+						"_graphicRef": "Center",
+						"_name": "Rel",
+						"_type": "([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])?"
+					}
+				],
+				"_name": "ARROW",
+				"_ref": "connectors/Arrow.svg"
+			}
+		],
+		"constraint": "Connected",
+		"_name": "FlowChartP"
+	}
+}

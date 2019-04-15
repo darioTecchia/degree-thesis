@@ -1,0 +1,80 @@
+{
+    "language": {
+        "token": [
+            {
+                "ap": [
+                    {
+                        "_type": "exit",
+                        "_name": "OUT",
+                        "_ref": "Down",
+                        "_connectNum": ">=0"
+                    },
+                    {
+                        "_type": "enter",
+                        "_name": "IN",
+                        "_ref": "Up",
+                        "_connectNum": "==0"
+                    }
+                ],
+                "_name": "ROOT",
+                "text": [
+                    {
+                        "_graphicRef": "Center",
+                        "_name": "Desc",
+                        "_type": "string"
+                    }
+                ],
+                "_ref": "Circle",
+                "_occurrences": "==1"
+            },
+            {
+                "ap": [
+                    {
+                        "_type": "enter",
+                        "_name": "IN",
+                        "_ref": "Up",
+                        "_connectNum": "==1"
+                    },
+                    {
+                        "_type": "exit",
+                        "_name": "OUT",
+                        "_ref": "Down",
+                        "_connectNum": ">=0"
+                    }
+                ],
+                "_name": "NODE",
+                "text": [
+                    {
+                        "_graphicRef": "Center",
+                        "_name": "Desc",
+                        "_type": "string"
+                    }
+                ],
+                "_ref": "Circle",
+                "_occurrences": ">=0"
+            }
+        ],
+        "connector": [
+            {
+                "ap": [
+                    {
+                        "_type": "exit",
+                        "_name": "OUT",
+                        "_ref": "P2:P1",
+                        "_connectNum": "==1"
+                    },
+                    {
+                        "_type": "enter",
+                        "_name": "IN",
+                        "_ref": "P1:P2",
+                        "_connectNum": "==1"
+                    }
+                ],
+                "_name": "EDGE",
+                "_ref": "connectors/Line.svg"
+            }
+        ],
+        "constraint": "Connected",
+        "_name": "tree"
+    }
+}

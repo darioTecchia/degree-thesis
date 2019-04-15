@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="884" dy="778" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="SSS_22-3" value="" style="shape=flowchartp.triangledown;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=black;strokeWidth=2" vertex="1" parent="1" visited="0" name="BEGIN" status="COMPLETE">
+            <mxGeometry x="380" y="150" width="95" height="61" as="geometry"/>
+            <Object _name="BEGIN" _ref="symbols/FlowchartBase/TriangleDOWN.xml" _occurrences="==1" as="rules">
+                <Array as="ap">
+                    <Object _type="exit" _name="OUT" _ref="Down" _connectNum="==1"/>
+                </Array>
+            </Object>
+            <Object as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-4" value="" style="shape=flowchartp.triangleup;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=black;strokeWidth=2" vertex="1" parent="1" visited="1" name="END">
+            <mxGeometry x="390" y="630" width="95" height="61" as="geometry"/>
+            <Object _name="END" _ref="symbols/FlowchartBase/TriangleUp.xml" _occurrences="==1" as="rules">
+                <Array as="ap">
+                    <Object _type="enter" _name="IN" _ref="Up" _connectNum="&gt;=1"/>
+                </Array>
+            </Object>
+            <Object as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-5" value="float a = get()" style="shape=flowchartp.parallelogram;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=black;strokeWidth=2" vertex="1" parent="1" visited="1" name="IO">
+            <mxGeometry x="380" y="250" width="98" height="60" as="geometry"/>
+            <Object _name="IO" _ref="symbols/FlowchartBase/Parallelogram.xml" _occurrences="&gt;=0" as="rules">
+                <Array as="ap">
+                    <Object _type="enter" _name="IN" _ref="Up" _connectNum="&gt;=1"/>
+                    <Object _type="exit" _name="OUT" _ref="Down" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Code" _type="string"/>
+                </Array>
+            </Object>
+            <Object Code="float a = get()" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-6" value="true_state" style="shape=flowchartp.rectangle;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=black;strokeWidth=2" vertex="1" parent="1" visited="1" name="STAT">
+            <mxGeometry x="260" y="500" width="98" height="60" as="geometry"/>
+            <Object _name="STAT" _ref="symbols/FlowchartBase/Rectangle.xml" _occurrences="&gt;=0" as="rules">
+                <Array as="ap">
+                    <Object _type="enter" _name="IN" _ref="Up" _connectNum="&gt;=1"/>
+                    <Object _type="exit" _name="OUT" _ref="Down" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Code" _type="string"/>
+                </Array>
+            </Object>
+            <Object Code="true_state" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-7" value="false_state" style="shape=flowchartp.rectangle;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=black;strokeWidth=2" vertex="1" parent="1" visited="1" name="STAT">
+            <mxGeometry x="510" y="500" width="98" height="60" as="geometry"/>
+            <Object _name="STAT" _ref="symbols/FlowchartBase/Rectangle.xml" _occurrences="&gt;=0" as="rules">
+                <Array as="ap">
+                    <Object _type="enter" _name="IN" _ref="Up" _connectNum="&gt;=1"/>
+                    <Object _type="exit" _name="OUT" _ref="Down" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Code" _type="string"/>
+                </Array>
+            </Object>
+            <Object Code="false_state" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-8" value="" style="attP=Tail-Head;graphicRef=connectors/Arrow.svg;edgeStyle=none;endArrow=block;html=1;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=black;" edge="1" parent="1" source="JfG5RTRKDmLLTffs3Ajy-3" target="JfG5RTRKDmLLTffs3Ajy-5" visited="0" name="ARROW" status="INCOMPLETE">
+            <mxGeometry width="100" height="100" relative="1" as="geometry">
+                <mxPoint x="150" y="360" as="sourcePoint"/>
+                <mxPoint x="250" y="260" as="targetPoint"/>
+            </mxGeometry>
+            <Object _name="ARROW" _ref="connectors/Arrow.svg" as="rules">
+                <Array as="ap">
+                    <Object _type="exit" _name="Tail" _ref="Tail" _connectNum="==1"/>
+                    <Object _type="enter" _name="Head" _ref="Head" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Rel" _type="([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])?"/>
+                </Array>
+            </Object>
+            <Object Rel="" Goto="JfG5RTRKDmLLTffs3Ajy-5" PrePred="0" End="0" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-9" value="" style="attP=Tail-Head;graphicRef=connectors/Arrow.svg;edgeStyle=none;endArrow=block;html=1;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=black;" edge="1" parent="1" source="JfG5RTRKDmLLTffs3Ajy-5" target="JfG5RTRKDmLLTffs3Ajy-10" visited="1" name="ARROW">
+            <mxGeometry width="100" height="100" relative="1" as="geometry">
+                <mxPoint x="160" y="400" as="sourcePoint"/>
+                <mxPoint x="260" y="300" as="targetPoint"/>
+            </mxGeometry>
+            <Object _name="ARROW" _ref="connectors/Arrow.svg" as="rules">
+                <Array as="ap">
+                    <Object _type="exit" _name="Tail" _ref="Tail" _connectNum="==1"/>
+                    <Object _type="enter" _name="Head" _ref="Head" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Rel" _type="([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])?"/>
+                </Array>
+            </Object>
+            <Object Rel="" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-10" value="a &amp;gt; 0" style="shape=flowchartp.rumble;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=black;strokeWidth=2" vertex="1" parent="1" visited="1" name="PRED">
+            <mxGeometry x="380" y="370" width="98" height="57" as="geometry"/>
+            <Object _name="PRED" _ref="symbols/FlowchartBase/Rumble.xml" _occurrences="&gt;=0" as="rules">
+                <Array as="ap">
+                    <Object _type="enter" _name="IN" _ref="Up" _connectNum="&gt;=1"/>
+                    <Object _type="exit" _name="FOUT" _ref="Left" _connectNum="==1"/>
+                    <Object _type="exit" _name="TOUT" _ref="Right" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Cond" _type="string"/>
+                </Array>
+            </Object>
+            <Object Cond="a &amp;gt; 0" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-11" value="true" style="attP=Tail-Head;graphicRef=connectors/Arrow.svg;edgeStyle=none;endArrow=block;html=1;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=black;" edge="1" parent="1" source="JfG5RTRKDmLLTffs3Ajy-10" target="JfG5RTRKDmLLTffs3Ajy-6" visited="1" name="ARROW">
+            <mxGeometry width="100" height="100" relative="1" as="geometry">
+                <mxPoint x="200" y="470" as="sourcePoint"/>
+                <mxPoint x="300" y="370" as="targetPoint"/>
+            </mxGeometry>
+            <Object _name="ARROW" _ref="connectors/Arrow.svg" as="rules">
+                <Array as="ap">
+                    <Object _type="exit" _name="Tail" _ref="Tail" _connectNum="==1"/>
+                    <Object _type="enter" _name="Head" _ref="Head" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Rel" _type="([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])?"/>
+                </Array>
+            </Object>
+            <Object Rel="true" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-12" value="false" style="attP=Tail-Head;graphicRef=connectors/Arrow.svg;edgeStyle=none;endArrow=block;html=1;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=black;" edge="1" parent="1" source="JfG5RTRKDmLLTffs3Ajy-10" target="JfG5RTRKDmLLTffs3Ajy-7" visited="1" name="ARROW">
+            <mxGeometry width="100" height="100" relative="1" as="geometry">
+                <mxPoint x="550" y="460" as="sourcePoint"/>
+                <mxPoint x="650" y="360" as="targetPoint"/>
+            </mxGeometry>
+            <Object _name="ARROW" _ref="connectors/Arrow.svg" as="rules">
+                <Array as="ap">
+                    <Object _type="exit" _name="Tail" _ref="Tail" _connectNum="==1"/>
+                    <Object _type="enter" _name="Head" _ref="Head" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Rel" _type="([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])?"/>
+                </Array>
+            </Object>
+            <Object Rel="false" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-13" value="" style="attP=Tail-Head;graphicRef=connectors/Arrow.svg;edgeStyle=none;endArrow=block;html=1;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=black;" edge="1" parent="1" source="JfG5RTRKDmLLTffs3Ajy-6" target="JfG5RTRKDmLLTffs3Ajy-4" visited="1" name="ARROW">
+            <mxGeometry width="100" height="100" relative="1" as="geometry">
+                <mxPoint x="40" y="580" as="sourcePoint"/>
+                <mxPoint x="140" y="480" as="targetPoint"/>
+            </mxGeometry>
+            <Object _name="ARROW" _ref="connectors/Arrow.svg" as="rules">
+                <Array as="ap">
+                    <Object _type="exit" _name="Tail" _ref="Tail" _connectNum="==1"/>
+                    <Object _type="enter" _name="Head" _ref="Head" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Rel" _type="([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])?"/>
+                </Array>
+            </Object>
+            <Object Rel="" as="semanticProperty"/>
+        </mxCell>
+        <mxCell id="JfG5RTRKDmLLTffs3Ajy-14" value="" style="attP=Tail-Head;graphicRef=connectors/Arrow.svg;edgeStyle=none;endArrow=block;html=1;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=black;" edge="1" parent="1" source="JfG5RTRKDmLLTffs3Ajy-7" target="JfG5RTRKDmLLTffs3Ajy-4" visited="1" name="ARROW">
+            <mxGeometry width="100" height="100" relative="1" as="geometry">
+                <mxPoint x="560" y="700" as="sourcePoint"/>
+                <mxPoint x="540" y="640" as="targetPoint"/>
+            </mxGeometry>
+            <Object _name="ARROW" _ref="connectors/Arrow.svg" as="rules">
+                <Array as="ap">
+                    <Object _type="exit" _name="Tail" _ref="Tail" _connectNum="==1"/>
+                    <Object _type="enter" _name="Head" _ref="Head" _connectNum="==1"/>
+                </Array>
+                <Array as="text">
+                    <Object _graphicRef="Center" _name="Rel" _type="([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])?"/>
+                </Array>
+            </Object>
+            <Object Rel="" as="semanticProperty"/>
+        </mxCell>
+    </root>
+</mxGraphModel>

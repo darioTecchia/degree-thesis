@@ -36,7 +36,7 @@
         \end{itemize}
         I vincoli al livello della sentenza sono riportati nell'ultima riga. Una parte della formalizzazione della tabella \ref{tab:elem_specification} in formato XML è mostrata nello snippet di codice \ref{lst:xml_elem_specification}, l'intera specifica è consultabile nell'appendice \ref{appendix:xml_definition}.
 
-        \lstinputlisting[caption={\textbf{Frammento della definizione in formato XML di un linguaggio, nel particolare la specifica per il simbolo \textit{root} (o radice).}},label={lst:xml_elem_specification},language=Xml, firstline=2, lastline=7]{SourceCode/tree_specific.xml}
+        \lstinputlisting[language=JavaScript,caption={\textbf{Frammento della definizione in formato XML di un linguaggio, nel particolare la specifica per il simbolo \textit{root} (o radice).}},label={lst:xml_elem_specification},language=Xml, firstline=2, lastline=7]{SourceCode/tree_specific.xml}
 
         \noindent
         Nel paper~\cite{extending_localcontext}, viene esteso il concetto della specifica semantica esposta in~\cite{localcontext_recognition} aggiugendo nuove caratteristiche alla specifica del contesto locale per permettere la specifica di linguaggi visuale più complessi quali diagrammi entità-relazione, use case diagrams e class diagram. In più viene presentato un tool (LoCoMoTiVE, specificato nel paragrafo 2.2) che implementa il framework \textit{Local Context}.
@@ -49,6 +49,7 @@
         \end{itemize}
 
     \section{Semantica}
+        \label{sec:semantica}
         In \cite{localcontext} viene esteso il framework definendo una nuova tecnica per una traduzione semantica del liguaggio visuale basata sul contesto locale. Questa tecnica usa delle esspressioni simili a queli di XPath, chiamate SGPath, illustrate nel dettaglio nel capitolo 5.
         \newline
         Per consentire la traduzione semantica di un linguaggio visuale è stata descritta una definizione semantica basata sul contesto locale o \textit{LCSD}\footnote{Local Context-based Semantic Definition} e il suo algoritmo per valutarla. L'LCSD consiste di una sequenza di regole semantiche una per ogni elemento del linguaggio. Ogni regola calcola una proprietà attraverso delle procedure che fanno uso degli SGPath o esegue un'azione che dipende dalla proprietà e gli attributi. Ogni proprietà può avere una post-condizione.

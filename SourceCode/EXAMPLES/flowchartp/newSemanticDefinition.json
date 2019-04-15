@@ -1,0 +1,258 @@
+{
+    "language": {
+        "semantic": [
+            {
+                "property": [
+                    {
+                        "action": "print('#include <stdio.h>\\n\\n'); print('int main(void) {\\n')"
+                    }
+                ],
+                "visit": {
+                    "path": [
+                        {
+                            "_value": "ARROW",
+                            "_flag": "D"
+                        }
+                    ],
+                    "_priority": "1",
+                    "_order": "1"
+                },
+                "_ref": "BEGIN"
+            },
+            {
+                "property": [
+                    {
+                        "_name": "$GotoTrue",
+                        "_type": "string",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "assign",
+                                "_path": "(#attType = 'exit')::ARROW[@Rel='true']/*",
+                                "_param": "#id"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$GotoFalse",
+                        "_type": "string",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "assign",
+                                "_path": "(#attType = 'exit')::ARROW[@Rel='false']/*",
+                                "_param": "#id"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$Count",
+                        "_type": "number",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "size",
+                                "_path": "(#attName = 'Up')::*",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$PrePred",
+                        "_type": "boolean",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "exist",
+                                "_path": "(#attName = 'Up')::ARROW/PRED",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "action": "if($Count > 1 || $PrePred) { print(#id + ': ') } print('if(' + @Cond + ') goto ' + $GotoTrue + '; else goto ' + $GotoFalse + ';\\n');"
+                    }
+                ],
+                "visit": {
+                    "path": [
+                        {
+                            "_value": "(#attType='exit')::ARROW[@Rel='true']",
+                            "_flag": "D"
+                        },
+                        {
+                            "_value": "(#attType='exit')::ARROW[@Rel='false']",
+                            "_flag": "D"
+                        }
+                    ],
+                    "_priority": "1",
+                    "_order": "5"
+                },
+                "_ref": "PRED"
+            },
+            {
+                "property": [
+                    {
+                        "_name": "$Goto",
+                        "_type": "string",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "assign",
+                                "_path": "(#attName='HEAD')::*",
+                                "_param": "#id"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$Printed",
+                        "_type": "int",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "assign",
+                                "_path": "(#attName='HEAD')::*",
+                                "_param": "#status"
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$PrePred",
+                        "_type": "boolean",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "exist",
+                                "_path": "(#attName='TAIL')::PRED",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$End",
+                        "_type": "boolean",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "exist",
+                                "_path": "(#attName='HEAD')::END",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "action": "if(!$PrePred && ($Printed == 'COMPLETE' || $End )) { print('goto ' + $Goto + ';\\n') }"
+                    }
+                ],
+                "visit": {
+                    "path": [
+                        {
+                            "_value": "(#attName='HEAD')::*",
+                            "_flag": "D"
+                        }
+                    ],
+                    "_priority": "1",
+                    "_order": "2"
+                },
+                "_ref": "ARROW"
+            },
+            {
+                "property": [
+                    {
+                        "_name": "$Count",
+                        "_type": "number",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "size",
+                                "_path": "(#attName = 'Up')::*",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$PrePred",
+                        "_type": "boolean",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "exist",
+                                "_path": "(#attName = 'Up')::ARROW/PRED",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "action": "if($Count > 1 || $PrePred) { print(#id + ': ') } print(@Code + ';\\n')"
+                    }
+                ],
+                "visit": {
+                    "path": [
+                        {
+                            "_value": "(#attType='exit')::ARROW",
+                            "_flag": "D"
+                        }
+                    ],
+                    "_priority": "1",
+                    "_order": "4"
+                },
+                "_ref": "IO"
+            },
+            {
+                "property": [
+                    {
+                        "_name": "$Count",
+                        "_type": "number",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "size",
+                                "_path": "(#attName = 'Up')::*",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "_name": "$PrePred",
+                        "_type": "boolean",
+                        "procedure": [
+                            {
+                                "_postCondition": "",
+                                "_name": "exist",
+                                "_path": "(#attName = 'Up')::ARROW/PRED",
+                                "_param": ""
+                            }
+                        ]
+                    },
+                    {
+                        "action": "if($Count > 1 || $PrePred) { print(#id + ': ') } print(@Code + ';\\n')"
+                    }
+                ],
+                "visit": {
+                    "path": [
+                        {
+                            "_value": "(#attType='exit')::ARROW",
+                            "_flag": "D"
+                        }
+                    ],
+                    "_priority": "1",
+                    "_order": "3"
+                },
+                "_ref": "STAT"
+            },
+            {
+                "property": [
+                    {
+                        "action": "print(#id + ': ;\\n}')"
+                    }
+                ],
+                "visit": {
+                    "path": [],
+                    "_priority": "2",
+                    "_order": "6"
+                },
+                "_ref": "END"
+            }
+        ],
+        "_name": "FlowChartP"
+    }
+}
