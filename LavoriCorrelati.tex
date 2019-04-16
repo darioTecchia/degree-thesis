@@ -1,4 +1,4 @@
-\chapter{Lavori Correlati}
+﻿\chapter{Lavori Correlati}
     Il mio lavoro di tesi, essendo principalmente un porting ed una rivisitazione, si basa su strumenti precedentemente sviluppati.
     Gli strumenti in questione sono descritti nel dettaglio nei seguenti sotto-paragrafi.
 
@@ -11,11 +11,11 @@
             \label{fig:drawio}
         \end{figure}
 
-        TiveJS, è basato su draw.io, un'applicazione web gratis che permette agli utenti di creare diagrammi e grafi direttamente dal proprio browser web, mostrato in figura \ref{fig:drawio}. Ha un'integrazione con Google Drive e Dropbox per il salvataggio di dati che può avvenire anche con l'ausilio del localStorage del browser o attraverso il salvataggio di file sulla macchina. Draw.io è basato sulla libreria mxGraph. Il software è stato sviluppato nel 2005 dalla JGraph Ltd.
+        TiveJS, è basato su draw.io, un'applicazione web gratis che permette agli utenti di creare diagrammi e grafi direttamente dal proprio browser web, mostrato in figura \ref{fig:drawio}. Ha un'integrazione con Google Drive e Dropbox per il salvataggio di dati che può avvenire anche con l'ausilio del \texttt{localStorage} del browser o attraverso il salvataggio di file sulla macchina. Draw.io è basato sulla libreria mxGraph. Il software è stato sviluppato nel 2005 dalla JGraph Ltd.
 
     \section{LoCoMoTiVE}
         
-        All'attuale stato dell'arte troviamo l'ecosistema LoCoMoTiVE, ovvero un'unione di due software, LoCoModeler e Tive. Presentato in~\cite{extending_localcontext} e~\cite{localcontext}, questo tool permette l'analisi semantica basata sul contesto locale, vista nel dettaglio nel capitolo~\ref{ch:localcontext}. Nei prossimi due paragrafi andrò ad illustrare singolarmente i due componenti di cui è composto.
+        All'attuale stato dell'arte vi è l'ecosistema LoCoMoTiVE, ovvero un'unione di due software, LoCoModeler e TiVE. Presentato in~\cite{extending_localcontext} e~\cite{localcontext}, questo tool permette l'analisi semantica basata sul contesto locale, illustrata nel dettaglio nel capitolo~\ref{ch:localcontext}. Nei prossimi due paragrafi andrò ad illustrare singolarmente i due componenti di cui è composto.
 
         \subsection{LoCoModeler}
         
@@ -26,7 +26,7 @@
                 \label{fig:locomodeler}
             \end{figure}
 
-            Come descritto in \cite{extending_localcontext}, il modulo LoCoModeler consente ai designer la creazione e la modifica del linguaggio visivo in base al contesto locale, in maniera rapida e facile. Il suo output è la definizione in formato XML del linguaggio che verrà utilizzato durante il riconoscimento dei diagrammi. Una volta che il progettista ha completato la specifica del linguaggio, può compilarlo in un ambiente web (il modulo TiVE) per consentire agli utenti di disegnare frasi e verificarne la correttezza. Durante la definizione del linguaggio, questa funzione consente al progettista di controllare la correttezza delle specifiche.
+            Come descritto in \cite{extending_localcontext}, il modulo LoCoModeler consente ai designer la creazione e la modifica del linguaggio visivo in base al contesto locale, in maniera rapida e facile. Il suo output è la definizione in formato XML del linguaggio che verrà utilizzato durante il riconoscimento dei diagrammi. Una volta che il progettista ha completato la specifica del linguaggio, può compilarla in un ambiente web (il modulo TiVE) per consentire agli utenti di disegnare frasi e verificarne la correttezza. Durante la definizione del linguaggio, questa funzione consente al progettista di controllare la correttezza delle specifiche.
             \newline
             Una schermata principale dell'interfaccia grafica del tool è mostrata nella Figura \ref{fig:locomodeler}. Le sue componenti principali sono:
             \begin{itemize}
@@ -77,4 +77,4 @@
             \item un contorno rettangolare
             \item un contorno ellittico
         \end{itemize}
-        Altra funzionalità di drawSe è la creazione di set di simboli personalizzati o \textit{custom palette}, ovvero un insieme dei simboli creati grazie alle due modalità specificate prima. Lo strumento è spiegato nel dettaglio in \cite{drawSE}. TiveJS fa uso delle palette generate in drawSE.
+        Altra funzionalità di drawSE è la creazione di set di simboli personalizzati o \textit{custom palette}, ovvero un insieme dei simboli creati grazie alle due modalità specificate prima. Lo strumento è spiegato nel dettaglio in \cite{drawSE}. TiveJS fa uso delle palette generate in drawSE.
