@@ -66,7 +66,7 @@
                     return nodes;
                 }
             \end{lstlisting}
-        
+        \newpage
         \subsection{Progettazione di sentenze visive}
             La progettazione delle sentenze visive avviene attraverso una GUI\footnote{Interfaccia Grafica.} molto semplice ed intuitiva, simile a quella nella figura~\ref{fig:drawio}.
 
@@ -129,14 +129,18 @@
             \subsubsection{Definizioni Sintattiche}
                 Ogni linguaggio ha delle regole sintattiche da rispettare. Un esempio di definizione sintattica è raffigurata nella tabella \ref{tab:final_syntax_definition}. Nella colonna \textit{Symbol occurences} vi è un vincolo al livello del simbolo, indica quante occorrenze del simbolo devono essere presenti all'interno del diagramma. Nell'ultima colonna, \textit{constraints}, vi troviamo i vincoli al livello degli Attaching Point e il formato che deve avere il campo di testo dell'elemento se specificato. Nell'ultima riga, \textit{Sentence level constraint}, troviamo i vincoli che il diagramma deve rispettare.
                 \newline
-                Come ho già accennato, in TiVE le definizioni erano scritte in formato XML (vedi Appendice \ref{appendix:xml_definition}). Successivamente le ho implementate in formato JSON\footnote{JavaScript Object Notation} per poter essere interpretate in maniera nativa dal linguaggio di programmazione da me usato. All'interno dello snippet di codice \ref{lst:newDefinition} vi è una parte della definizione nel nuovo formato. 
-                \newline
-                Il valore di "\textit{ap}" è un array contenente i vincoli per i punti d'attacco; "\textit{text}" contiene le informazioni riguardanti le aree di testo; "\textit{\_name}" è il nome del simbolo; "\textit{\_ref}" indica a quale figura grafica si fa riferimento; "\textit{occurences}" è il vincolo sulle occorrenze del simbolo.
-                \newline
-                L'intera definizione è consultabile all'Appendice \ref{appendix:jsonDefinition}.
+                Come ho già accennato, in TiVE le definizioni erano scritte in formato XML (vedi Appendice \ref{appendix:xml_definition}). Successivamente le ho implementate in formato JSON\footnote{JavaScript Object Notation}, seguendo uno schema (\ref{appendix:syntaxSchema}) da me definito, per poter essere interpretate in maniera nativa dal linguaggio di programmazione da me usato. All'interno dello snippet di codice \ref{lst:newDefinition} vi è una parte della definizione nel nuovo formato. 
                 \begin{spacing}{0.5}
                     \lstinputlisting[language=JavaScript, caption={\textbf{Frammento della definizione sintattica in formato JSON di un linguaggio, nel particolare la specifica per il simbolo \textit{ROOT} (o Radice).}},label={lst:newDefinition}, firstline=4, lastline=29]{SourceCode/newDefinition.json}
                 \end{spacing}
+                \begin{itemize}
+                    \item \textbf{ap} è un array contenente i vincoli per i punti d'attacco;
+                    \item \textbf{text} contiene le informazioni riguardanti le aree di testo;
+                    \item \textbf{\_name} è il nome del simbolo;
+                    \item \textbf{\_ref} indica a quale figura grafica si fa riferimento;
+                    \item \textbf{occurences} è il vincolo sulle occorrenze del simbolo.
+                \end{itemize}
+                L'intera definizione d'esempio è consultabile all'Appendice \ref{appendix:jsonDefinition}.
 
             \subsubsection{Definizioni Semantiche}
                 Le definizioni semantiche sono necessarie alla traduzione del diagramma. Un esempio di definizione semantica (o definizione LCSD) è raffigurata nella tabella \ref{tab:semantic_specification}. Come già detto nella sezione \ref{sec:semantica}, la specifica semantica è composta da quattro elementi fondamentali: 
@@ -146,7 +150,7 @@
                     \item \textbf{Params} sono i parametri da passare alla procedura;
                     \item \textbf{Post-condition} è la condizione che deve essere rispettata al termine dell'esecuzione della procedura.
                 \end{itemize}
-                Anche in questo caso ho trascritto le definizioni sintattiche dal formato XML al formato JSON. All'interno dello snippet di codice \ref{lst:newSemanticDefinition} vi è una parte della definizione nel nuovo formato. 
+                Anche in questo caso ho trascritto le definizioni sintattiche dal formato XML al formato JSON utilizzando uno schema da me definito (\ref{appendix:semanticSchema}). All'interno dello snippet di codice \ref{lst:newSemanticDefinition} vi è una parte della definizione nel nuovo formato. 
                 \begin{itemize}
                     \item \textbf{property} contiene tutte le proprietà da computare. Ogni proprietà è composta da:
                     \begin{itemize}

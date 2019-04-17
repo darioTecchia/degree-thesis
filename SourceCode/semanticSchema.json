@@ -1,0 +1,27 @@
+{
+  "language": {
+    "semantic": [
+      {
+        "property": [
+          {
+            "_name": "",
+            "_type": "",
+            "procedure": [
+              {
+                "_postCondition": "",
+                "_name": "",
+                "_path": "",
+                "_param": ""
+              }
+            ]
+          },
+          {
+            "action": ""
+          }
+        ],
+        "_ref": "entity"
+      }
+    ],
+    "_name": "EntityRelationship"
+  }
+}

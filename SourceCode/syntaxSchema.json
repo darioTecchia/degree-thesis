@@ -1,0 +1,55 @@
+{
+    "language": {
+        "token": [
+            {
+                "ap": [
+                    {
+                        "_type": "",
+                        "_name": "",
+                        "_ref": "",
+                        "_connectNum": ""
+                    }
+                ],
+                "text": [
+                    {
+                        "_graphicRef": "",
+                        "_name": "",
+                        "_type": ""
+                    }
+                ],
+                "_name": "",
+                "_ref": "",
+                "_occurrences": ""
+            }
+        ],
+        "connector": [
+            {
+                "ap": [
+                    {
+                        "_type": "",
+                        "_name": "",
+                        "_ref": "",
+                        "_connectNum": ""
+                    },
+                    {
+                        "_type": "",
+                        "_name": "",
+                        "_ref": "",
+                        "_connectNum": ""
+                    }
+                ],
+                "text": [
+                    {
+                        "_graphicRef": "",
+                        "_name": "",
+                        "_type": ""
+                    }
+                ],
+                "_name": "",
+                "_ref": ""
+            }
+        ],
+        "constraint": "",
+        "_name": ""
+    }
+}
