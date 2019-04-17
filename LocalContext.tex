@@ -1,7 +1,7 @@
-\chapter{Local Context}\label{ch:localcontext}
+﻿\chapter{Local Context}\label{ch:localcontext}
     Il riconoscimento dei diagrammi viene effettuato in base al \textit{Local Context}, presentato nei paper~\cite{localcontext_recognition},~\cite{extending_localcontext} e~\cite{localcontext}.
     \newline
-    Nel paper \textit{Local context-based recognition of sketched diagrams} \cite{localcontext_recognition}, il Local Context viene presentato come una nuova metodologia mirata alla creazione e all'implementazione di un framework\footnote{\textit{`Un framework, in generale, include software di supporto, librerie, un linguaggio per gli script e altri software che possono aiutare a mettere insieme le varie componenti di un progetto.`, \cite{framework}}} per il riconoscimento e l'interpretazione dei diagrammi. Nello specifico, i diagrammi possono contenere differenti elementi grafici quali simboli, connettori e testo. Una volta che i simboli sono stati identificati, il riconoscimento procede identificando il contesto locale di ogni simbolo.
+    Nel paper \textit{Local context-based recognition of sketched diagrams} \cite{localcontext_recognition}, il Local Context viene presentato come una nuova metodologia mirata alla creazione e all'implementazione di un framework\footnote{\textit{"Un framework, in generale, include software di supporto, librerie, un linguaggio per gli script e altri software che possono aiutare a mettere insieme le varie componenti di un progetto." \cite{framework}}} per il riconoscimento e l'interpretazione dei diagrammi. Nello specifico, i diagrammi possono contenere differenti elementi grafici quali simboli, connettori e testo. Una volta che i simboli sono stati identificati, il riconoscimento procede identificando il contesto locale di ogni simbolo.
     Il Local Context ha due diverse specifiche: sintattiche e semantiche.
     \section{Sintassi}
         Sempre in~\cite{localcontext_recognition}, viene definita la specifica sintattica di un linguaggio visuale.
@@ -9,9 +9,9 @@
         \begin{itemize}
             \item Definizione dei simboli (token) che compongono il linguaggio visuale:
             \begin{itemize}
-                \item Definizione dell'apparenza ''fisica'' dei simboli (ad esempio forma, colore, ecc.);
-                \item Definizione degli attributi del simbolo della loro forma e del loro aspetto (ad esempio punti/area d'attaccamento, ecc);
-                \item Definizione dei vincoli locali al simbolo riguardanti gli attributi (ad esempio il numero di connessioni permesse ad un punto d'attaccamento, ecc.).
+                \item Definizione dell'apparenza "fisica" dei simboli (ad esempio forma, colore, ecc.);
+                \item Definizione degli attributi del simbolo della loro forma e del loro aspetto (ad esempio punti/area d'attacco, ecc);
+                \item Definizione dei vincoli locali al simbolo riguardanti gli attributi (ad esempio il numero di connessioni permesse ad un punto d'attacco, ecc.).
             \end{itemize}
             \item Definizione delle relazioni/connettori e i loro vincoli locali;
             \item Dichiarazione di vincoli al livello del diagramma (ad esempio numero di occorrenze ammissibili di un simbolo, se i simboli e i connettori devono formare un grafo connesso);
@@ -21,18 +21,18 @@
         \begin{table}[htbp]
             \centering
             \includegraphics[scale=0.35]{Figure/elem_specification.PNG}
-            \caption{Specifica di un linguaggio, nel particolare di un Albero}
+            \caption{Specifica di un linguaggio, nel particolare di un Albero \cite{localcontext_recognition}}
             \label{tab:elem_specification}
         \end{table}
         \noindent
         Facendo riferimento alla tabella~\ref{tab:elem_specification}, ovvero la specifica di un linguaggio che identifica un Albero, possiamo notare che ogni riga identifica un simbolo (o token) e che ogni riga è composta da sei colonne, le prime tre sono indirizzate al livello del simbolo e le restanti tre colonne indicano i vincoli per gli attachment points:
         \begin{itemize}
             \item \textbf{Token}: indica il nome dell'elemento;
-            \item \textbf{Graphics}: rappresentazione grafica dell'elemento e rappresentazione dei punti d'attaccamento evidenziati in giallo;
+            \item \textbf{Graphics}: rappresentazione grafica dell'elemento e rappresentazione dei punti d'attacco evidenziati in giallo;
             \item \textbf{Token occurences}: numero di occorrenze ammissibile per quel simbolo;
-            \item \textbf{name}: può essere composta da più righe ed indica i nomi dei punti d'attaccamento;
-            \item \textbf{type}: la tipologia di AP\footnote{Punti d'attaccamento.}, un tipo di punto di attaccamento può avere più nomi;
-            \item \textbf{constraints}: i vincoli al livello dei punti d'attaccamento, \textit{connectNum} indica il numero di archi incidenti a quel determinato AP.
+            \item \textbf{name}: può essere composta da più righe ed indica i nomi dei punti d'attacco;
+            \item \textbf{type}: la tipologia di AP\footnote{Punti d'attacco.}, un tipo di punto di attacco può avere più nomi;
+            \item \textbf{constraints}: i vincoli al livello dei punti d'attacco, \textit{connectNum} indica il numero di archi incidenti a quel determinato AP.
         \end{itemize}
         I vincoli al livello della sentenza sono riportati nell'ultima riga. Una parte della formalizzazione della tabella \ref{tab:elem_specification} in formato XML è mostrata nello snippet di codice \ref{lst:xml_elem_specification}, l'intera specifica è consultabile nell'appendice \ref{appendix:xml_definition}.
 
@@ -43,9 +43,9 @@
         \newline
         Le principali caratteristiche aggiunte sono tre:
         \begin{itemize}
-            \item La definizione di vincoli al livello del simbolo può coinvolgere più di un area di attaccamento di un simbolo/connettore al contrario di vincolare aree d'attaccamento individuali;
+            \item La definizione di vincoli al livello del simbolo può coinvolgere più di un area di attacco di un simbolo/connettore al contrario di vincolare aree d'attacco individuali;
             \item La definizione di un vincolo per limitare auto-cicli di un connettore;
-            \item Assegnazione di più tipi alle aree di attaccamento.
+            \item Assegnazione di più tipi alle aree di attacco.
         \end{itemize}
 
     \section{Semantica}
@@ -58,7 +58,7 @@
         \begin{table}[htbp]
             \centering
             \includegraphics[scale=0.37]{Figure/semantic_specification.PNG}
-            \caption{Specifica LCSD di un diagramma ER, costruita sulla specifica sintattica.}
+            \caption{Specifica LCSD di un diagramma ER, costruita sulla specifica sintattica \cite{localcontext}}
             \label{tab:semantic_specification}
         \end{table}
         \newline
@@ -74,7 +74,7 @@
         \begin{figure}[htbp]
             \centering
             \includegraphics[scale=0.4]{Figure/er_diagram.PNG}
-            \caption{Diagramma ER}
+            \caption{Diagramma ER, \cite{localcontext}}
             \label{fig:er_diagram}
         \end{figure}
         In questo caso, applicando le regole semantiche definite nella tabella \ref{tab:semantic_specification} al diagramma \ref{fig:er_diagram} ottengo la seguente traduzione semantica:

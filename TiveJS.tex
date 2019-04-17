@@ -1,10 +1,10 @@
 ﻿\chapter{TiveJS}
     Come introdotto, in questo lavoro presento TiveJS, che è un porting ed un'evoluzione di TiVE e come esso è in grado di: permettere la progettazione di sentenze visive grazie all'ausilio di palette di simboli personalizzate, il riconoscimento di linguaggio diagrammatici e la traduzione di quest'ultimi.
     \newline
-    Il paper da cui deriva questo lavoro è \textit{Using the local context for the definition and implementation of visual languages}~\cite{localcontext} in cui si parla di un metodo per la traduzione di diagrammi o in generale di sentenze visuali in sentenze semantiche.
+    Per l'implementazione di TiveJS mi sono basato sulle specifiche illustrate nel paper \textit{Using the local context for the definition and implementation of visual languages}~\cite{localcontext} in cui viene illustrato un metodo per la traduzione di diagrammi o in generale di sentenze visuali in sentenze semantiche.
 
-    \section{Funzionamento e Implementazione}
-        Il funzionamento si suddivide principalmente in tre fasi, mostrate schematicamente nella figura~\ref{fig:funzionamento}: la progettazione del diagramma, il riconoscimento di quest'ultimo e l'applicazioni delle definizioni sintattiche e semantiche. Durante tutte le procedure, la navigazione all'interno del grafo viene effettuata attraverso delle espressioni chiamate SGPath.
+    \section{Implementazione}
+        L'applicazione si divide principalmente tre fasi, mostrate schematicamente nella figura~\ref{fig:funzionamento}: la progettazione del diagramma, il riconoscimento di quest'ultimo e l'applicazioni delle definizioni sintattiche e semantiche. Durante tutte le procedure, la navigazione all'interno del grafo viene effettuata attraverso delle espressioni chiamate SGPath.
         \newline
         \begin{figure}[htbp]
             \centering
@@ -22,7 +22,7 @@
         Come vedremo, ogni fase può suddividersi in più sotto-fasi illustrate nel dettaglio nelle prossime sezioni.
 
         \subsection{SGPath}
-            Questa sezione descrive una specifica simile a XPath\footnote{\textit{"In informatica XPath è un linguaggio, parte della famiglia XML, che permette di individuare i nodi all'interno di un documento XML. Le espressioni XPath, a differenza delle espressioni XML, non servono a identificare la struttura di un documento, bensì a localizzarne con precisione i nodi."} \cite{xpath}} per la navigazione all'interno del grafo chiamata SGPath. Mentre XPath definisce delle espressioni per la navigazione all'interno dei file XML, SGPath definisce delle espressioni per navigare in una struttura a grafo.
+            In questa sezione riassumo il lavoro svolto in \cite{localcontext} in cui viene descritta una specifica simile a XPath\footnote{\textit{"In informatica XPath è un linguaggio, parte della famiglia XML, che permette di individuare i nodi all'interno di un documento XML. Le espressioni XPath, a differenza delle espressioni XML, non servono a identificare la struttura di un documento, bensì a localizzarne con precisione i nodi."} \cite{xpath}} per la navigazione all'interno del grafo chiamata SGPath. Mentre XPath definisce delle espressioni per la navigazione all'interno dei file XML, SGPath definisce delle espressioni per navigare in una struttura a grafo.
             \newline
             Un SGPath consiste di passaggi (o \textit{step}). Ogni passo è valutato su un insieme di nodi del grafo. Il risultato di ogni passo è un insieme di nodi del grafo. SGPath può far uso delle proprietà dei simboli quali nome, id, ecc.
             \newline
@@ -107,14 +107,14 @@
             \begin{table}[htbp]
                 \centering
                 \includegraphics[scale=0.4]{Figure/final_syntax_definition.PNG}
-                \caption{Specifica di un diagramma ER}
+                \caption{Specifica di un diagramma ER \cite{localcontext}}
                 \label{tab:final_syntax_definition}
             \end{table}
 
             \begin{table}[htbp]
                 \centering
                 \includegraphics[scale=0.4]{Figure/final_syntax_definition_tree.PNG}
-                \caption{Specifica di un Albero}
+                \caption{Specifica di un Albero \cite{localcontext}}
                 \label{tab:final_syntax_definition_tree}
             \end{table}
 

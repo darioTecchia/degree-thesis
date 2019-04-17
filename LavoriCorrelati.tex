@@ -11,7 +11,7 @@
             \label{fig:drawio}
         \end{figure}
 
-        TiveJS, è basato su draw.io, un'applicazione web gratis che permette agli utenti di creare diagrammi e grafi direttamente dal proprio browser web, mostrato in figura \ref{fig:drawio}. Ha un'integrazione con Google Drive e Dropbox per il salvataggio di dati che può avvenire anche con l'ausilio del \texttt{localStorage} del browser o attraverso il salvataggio di file sulla macchina. Draw.io è basato sulla libreria mxGraph. Il software è stato sviluppato nel 2005 dalla JGraph Ltd.
+        TiveJS, è basato su draw.io, un'applicazione web open source che permette agli utenti di creare diagrammi e grafi direttamente dal proprio browser web, mostrata in figura \ref{fig:drawio}. Ha un'integrazione con Google Drive e Dropbox per il salvataggio dati che può avvenire anche con l'ausilio del \texttt{localStorage} del browser o attraverso il salvataggio di file sulla macchina. Draw.io è basato sulla libreria mxGraph. Il software è sviluppato dal 2005 dalla JGraph Ltd.
 
     \section{LoCoMoTiVE}
         
@@ -22,7 +22,7 @@
             \begin{figure}[htbp]
                 \centering
                 \includegraphics[scale=1.5]{Figure/locomodeler.png}
-                \caption{Schermata di LoCoModeler}
+                \caption{Schermata di LoCoModeler \cite{localcontext}}
                 \label{fig:locomodeler}
             \end{figure}
 
@@ -31,9 +31,9 @@
             Una schermata principale dell'interfaccia grafica del tool è mostrata nella Figura \ref{fig:locomodeler}. Le sue componenti principali sono:
             \begin{itemize}
                 \item Una casella di testo contenente il nome del linguaggio e una checkbox che sta ad indicare se il diagramma o grafo deve essere o non essere necessariamente connesso\footnote{Un grafo è detto connesso se, per ogni coppia di vertici $(u, v)\in{V}$, esiste un cammino che collega u a v.}.
-                \item Una tabella riportante le informazioni principali dei simboli e dei connettori inclusi nel linguaggio. E' possibile modificare o eliminare un elemento interagendo con la riga di questo. L'utente può aggiungere nuovi simboli o connettori usando i bottoni sottostanti la tabella.
-                \item Un pannello (sulla destra) mostra un'anteprima grafica del simbolo o connettore selezionato nella tabella. E' possibile cambiare la rappresentazione grafica dell'elemento utilizzando il bottone \textit{Change}.
-                \item Una tabella (al centro) mostra le informazioni relative al simbolo o connettore selezionato. Ogni riga mostra un punto d'attacco e i relativi vincoli. E' possibile aggiungere nuove righe utilizzando i bottoni sovrastanti la tabella.
+                \item Una tabella riportante le informazioni principali dei simboli e dei connettori inclusi nel linguaggio. È possibile modificare o eliminare un elemento interagendo con la riga di quest'ultimo. L'utente può aggiungere nuovi simboli o connettori usando i bottoni sottostanti la tabella.
+                \item Un pannello (sulla destra) mostra un'anteprima grafica del simbolo o connettore selezionato nella tabella. È possibile cambiare la rappresentazione grafica dell'elemento utilizzando il bottone \textit{Change}.
+                \item Una tabella (al centro) mostra le informazioni relative al simbolo o connettore selezionato. Ogni riga mostra un punto d'attacco e i relativi vincoli. È possibile aggiungere nuove righe utilizzando i bottoni sovrastanti la tabella.
                 \item Un'area di testo dove è possibile specificare i vincoli per il simbolo o il connettore attraverso espressioni simili al C\footnote{Linguaggio di programmazione.}.
             \end{itemize}
             La definizione di un nuovo linguaggio può avvenire grazie all'ausilio di un \textit{Wizard} diviso in tre fasi.
@@ -47,7 +47,7 @@
                 \label{fig:tive}
             \end{figure}
 
-            Una volta definito il linguaggio, i diagrammi possono essere composti utilizzando i simboli e i connettori definiti nella sua specifica. Questo può essere fatto attraverso un editor grafico TiVE, che è un'applicazione web che consente la composizione di diagrammi direttamente dal browser web.
+            Una volta definito il linguaggio, i diagrammi possono essere composti utilizzando i simboli e i connettori definiti nella sua specifica. Questo può essere fatto attraverso un editor grafico TiVE \cite{localcontext}, che è un'applicazione web che consente la composizione di diagrammi direttamente dal browser web.
             \newline
             Come mostrato nella Figura~\ref{fig:tive}, l'applicazione è costituita da tre sezioni principali:
             \begin{itemize}
@@ -57,7 +57,7 @@
             \end{itemize}
 
     \section{DrawSE}
-        DrawSE è un'estensione di draw.io che permette la creazione di diagrammi con simboli altamente personalizzati. Le principali caratteristiche di drawSE sono le due modalità di editing: una per la creazione di simboli (\textit{Shape Mode}) e una per la definizione dei punti d'attacco\footnote{Dove gli archi andranno ad attaccarsi sulla figura.} dei simboli (\textit{AP Mode}).
+        DrawSE è un'estensione di draw.io sviluppata in un precedente lavoro di tesi da Vincenzo Caputo. Questo software permette la creazione di diagrammi con simboli altamente personalizzati. Le principali caratteristiche di drawSE sono le due modalità di editing: una per la creazione di simboli (\textit{Shape Mode}) e una per la definizione dei punti d'attacco\footnote{Dove gli archi andranno ad attaccarsi sulla figura.} dei simboli (\textit{AP Mode}).
         Le due modalità sono attivabili attraverso il selettore mostrato in figura \ref{fig:mode_switch}
         \begin{figure}[htbp]
             \centering
