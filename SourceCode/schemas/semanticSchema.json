@@ -1,0 +1,99 @@
+{
+    "title": "language",
+    "type": "object",
+    "required": ["_name", "semantic"],
+    "properties": {
+        "_name": {
+            "type": "string"
+        },
+        "semantic": {
+            "type": "object",
+            "required":["property", "_ref"],
+            "properties": {
+                "property": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "object",
+                                "title": "property",
+                                "required": ["_name", "_type"],
+                                "properties": {
+                                    "_name": {
+                                        "type": "string"
+                                    },
+                                    "_type": {
+                                        "type": "string"
+                                    },
+                                    "procedure": {
+                                        "type": "array",
+                                        "minItems": 1,
+                                        "items": {
+                                            "type": "object",
+                                            "title": "procedure",
+                                            "required":["_postCondition", "_name", "_param"],
+                                            "properties": {
+                                                "_postCondition": {
+                                                    "type": "string"
+                                                },
+                                                "_name": {
+                                                    "type": "(assign|size|exist|add|addAll)"
+                                                },
+                                                "_path": {
+                                                    "type": "SGPath"
+                                                },
+                                                "_param": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "title": "action",
+                                "properties": {
+                                    "action": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "visit": {
+                    "type": "object",
+                    "required": ["path", "_priority", "_order"],
+                    "properties": {
+                        "path": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "title": "path",
+                                "required": ["_value", "_flag"],
+                                "properties": {
+                                    "_value": {
+                                        "type": "SGPath"
+                                    },
+                                    "_flag": {
+                                        "type": "(B|D)"
+                                    }
+                                }
+                            }
+                        },
+                        "_priority": {
+                            "type": "integer"
+                        },
+                        "_order": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "_ref": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

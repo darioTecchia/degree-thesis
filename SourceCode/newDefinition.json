@@ -16,7 +16,6 @@
                         "_connectNum": "==0"
                     }
                 ],
-                "_name": "ROOT",
                 "text": [
                     {
                         "_graphicRef": "Center",
@@ -24,6 +23,7 @@
                         "_type": "string"
                     }
                 ],
+                "_name": "ROOT",
                 "_ref": "Circle",
                 "_occurrences": "==1"
             },

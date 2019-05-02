@@ -1,0 +1,166 @@
+{
+    "title": "language",
+    "type": "object",
+    "required": [
+        "token",
+        "connector",
+        "_name"
+    ],
+    "properties": {
+        "token": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "token",
+                "required": [
+                    "_name",
+                    "_ref",
+                    "_occurrences",
+                    "ap"
+                ],
+                "properties": {
+                    "_name": {
+                        "type": "string"
+                    },
+                    "_ref": {
+                        "type": "string"
+                    },
+                    "_occurrences": {
+                        "type": "(==|>=|<=|<|>) #"
+                    },
+                    "ap": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "ap",
+                            "required": [
+                                "_type",
+                                "_name",
+                                "_ref",
+                                "_connectNum"
+                            ],
+                            "properties": {
+                                "_type": {
+                                    "type": "string"
+                                },
+                                "_name": {
+                                    "type": "string"
+                                },
+                                "_ref": {
+                                    "type": "string"
+                                },
+                                "_connectNum": {
+                                    "type": "(==|>=|<=|<|>) #"
+                                }
+                            }
+                        }
+                    },
+                    "text": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "text",
+                            "required": [
+                                "_graphicRef",
+                                "_name",
+                                "_type"
+                            ],
+                            "properties": {
+                                "_graphicRef": {
+                                    "type": "string"
+                                },
+                                "_name": {
+                                    "type": "string"
+                                },
+                                "_type": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "connector": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "connector",
+                "required": [
+                    "_name",
+                    "_ref",
+                    "_occurrences",
+                    "ap"
+                ],
+                "properties": {
+                    "_name": {
+                        "type": "string"
+                    },
+                    "_ref": {
+                        "type": "string"
+                    },
+                    "_occurrences": {
+                        "type": "(==|>=|<=|<|>) #"
+                    },
+                    "ap": {
+                        "type": "array",
+                        "minItems": 2,
+                        "items": {
+                            "type": "object",
+                            "title": "ap",
+                            "required": [
+                                "_type",
+                                "_name",
+                                "_ref",
+                                "_connectNum"
+                            ],
+                            "properties": {
+                                "_type": {
+                                    "type": "string"
+                                },
+                                "_name": {
+                                    "type": "string"
+                                },
+                                "_ref": {
+                                    "type": "string"
+                                },
+                                "_connectNum": {
+                                    "type": "(==|>=|<=|<|>) #"
+                                }
+                            }
+                        }
+                    },
+                    "text": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "text",
+                            "required": [
+                                "_graphicRef",
+                                "_name",
+                                "_type"
+                            ],
+                            "properties": {
+                                "_graphicRef": {
+                                    "type": "string"
+                                },
+                                "_name": {
+                                    "type": "string"
+                                },
+                                "_type": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "constraint": {
+            "type": "(connected|)"
+        },
+        "_name": {
+            "type": "string"
+        }
+    }
+}

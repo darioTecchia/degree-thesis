@@ -129,18 +129,15 @@
             \subsubsection{Definizioni Sintattiche}
                 Ogni linguaggio ha delle regole sintattiche da rispettare. Un esempio di definizione sintattica è raffigurata nella tabella \ref{tab:final_syntax_definition}. Nella colonna \textit{Symbol occurences} vi è un vincolo al livello del simbolo, indica quante occorrenze del simbolo devono essere presenti all'interno del diagramma. Nell'ultima colonna, \textit{constraints}, vi troviamo i vincoli al livello degli Attaching Point e il formato che deve avere il campo di testo dell'elemento se specificato. Nell'ultima riga, \textit{Sentence level constraint}, troviamo i vincoli che il diagramma deve rispettare.
                 \newline
-                Come ho già accennato, in TiVE le definizioni erano scritte in formato XML (vedi Appendice \ref{appendix:xml_definition}). Successivamente le ho implementate in formato JSON\footnote{JavaScript Object Notation}, seguendo uno schema (\ref{appendix:syntaxSchema}) da me definito, per poter essere interpretate in maniera nativa dal linguaggio di programmazione da me usato. All'interno dello snippet di codice \ref{lst:newDefinition} vi è una parte della definizione nel nuovo formato. 
-                \begin{spacing}{0.5}
-                    \lstinputlisting[language=JavaScript, caption={\textbf{Frammento della definizione sintattica in formato JSON di un linguaggio, nel particolare la specifica per il simbolo \textit{ROOT} (o Radice).}},label={lst:newDefinition}, firstline=4, lastline=29]{SourceCode/newDefinition.json}
-                \end{spacing}
-                \begin{itemize}
-                    \item \textbf{ap} è un array contenente i vincoli per i punti d'attacco;
-                    \item \textbf{text} contiene le informazioni riguardanti le aree di testo;
-                    \item \textbf{\_name} è il nome del simbolo;
-                    \item \textbf{\_ref} indica a quale figura grafica si fa riferimento;
-                    \item \textbf{occurences} è il vincolo sulle occorrenze del simbolo.
-                \end{itemize}
-                L'intera definizione d'esempio è consultabile all'Appendice \ref{appendix:jsonDefinition}.
+                Come ho già accennato, in TiVE le definizioni erano scritte in formato XML (vedi Appendice \ref{appendix:xml_definition}). Successivamente le ho implementate in formato JSON\footnote{JavaScript Object Notation}, seguendo uno schema da me definito, per poter essere interpretate in maniera nativa dal linguaggio di programmazione da me usato. All'interno della figura \ref{fig:syntaxSchema} vi è una rappresentazione grafica dello schema.
+
+                \begin{figure}[]
+                    \centering
+                    \includegraphics[scale=0.45,angle=90,origin=c]{Figure/schema/syntaxSchema.PNG}
+                    \caption{Rappresentazione grafica dello schema della definizione sintattica, risultato dell'inserimento dello schema in formato JSON (si veda appendice \ref{appendix:syntaxSchema}) nell'applicazione JSON Schema Viewer \cite{jsonschema}}
+                    \label{fig:syntaxSchema}
+                \end{figure}
+                \newpage
 
             \subsubsection{Definizioni Semantiche}
                 Le definizioni semantiche sono necessarie alla traduzione del diagramma. Un esempio di definizione semantica (o definizione LCSD) è raffigurata nella tabella \ref{tab:semantic_specification}. Come già detto nella sezione \ref{sec:semantica}, la specifica semantica è composta da quattro elementi fondamentali: 
@@ -150,26 +147,15 @@
                     \item \textbf{Params} sono i parametri da passare alla procedura;
                     \item \textbf{Post-condition} è la condizione che deve essere rispettata al termine dell'esecuzione della procedura.
                 \end{itemize}
-                Anche in questo caso ho trascritto le definizioni sintattiche dal formato XML al formato JSON utilizzando uno schema da me definito (\ref{appendix:semanticSchema}). All'interno dello snippet di codice \ref{lst:newSemanticDefinition} vi è una parte della definizione nel nuovo formato. 
-                \begin{itemize}
-                    \item \textbf{property} contiene tutte le proprietà da computare. Ogni proprietà è composta da:
-                    \begin{itemize}
-                        \item \textbf{\_name} è il nome della proprietà;
-                        \item \textbf{\_type} è il formato della proprietà;
-                        \item \textbf{procedure} contiene le procedure da eseguire. Ogni procedura è composta da:
-                        \begin{itemize}
-                            \item \textbf{\_postCondition} è la condizione da rispettare al termine della procedura;
-                            \item \textbf{name} è il nome della procedura;
-                            \item \textbf{\_path} insieme a \textbf{\_param} sono i parametri da passare alla procedura.
-                        \end{itemize}
-                    \end{itemize}
-                    \item \textbf{visit} verrà utilizzato dall'algoritmo di ordinamento del grafo.
-                \end{itemize}
-                L'intera definizione è consultabile all'Appendice \ref{appendix:ERjsonSemanticDefinition}.
+                Anche in questo caso ho trascritto le definizioni sintattiche dal formato XML al formato JSON utilizzando uno schema da me definito. All'interno della figura \ref{fig:semanticSchema} vi è una rappresentazione grafica dello schema.
+
+                \begin{figure}[]
+                    \centering
+                    \includegraphics[scale=0.45,angle=90,origin=c]{Figure/schema/semanticSchema.PNG}
+                    \caption{Rappresentazione grafica dello schema della definizione semantica, risultato dell'inserimento dello schema in formato JSON (si veda appendice \ref{appendix:semanticSchema}) nell'applicazione JSON Schema Viewer \cite{jsonschema}}
+                    \label{fig:semanticSchema}
+                \end{figure}
                 \newpage
-                \begin{spacing}{0.5}
-                    \lstinputlisting[language=JavaScript, caption={\textbf{Frammento della definizione semantica in formato JSON di un linguaggio, nel particolare la specifica per il simbolo STAT}},label={lst:newSemanticDefinition}, firstline=200, lastline=241]{SourceCode/EXAMPLES/flowchartp/newSemanticDefinition.json}
-                \end{spacing}
 
         \subsection{Applicazione Regole Semantiche}
             Se l'applicazione delle definizioni è andata a buon fine, l'algoritmo procede con il calcolo delle regole semantiche. La procedura si suddivide in due fasi: ordinamento del grafo e calcolo delle definizioni semantiche.
@@ -325,14 +311,14 @@
                 Una volta applicate le definizioni, TiveJS mostrerà all'interno di una Console la traduzione semantica del diagramma (figura \ref{fig:semanticTranslation}) se non ci sono errori, altrimenti mostrerà all'interno della console gli errori che si sono verificati. Inoltre gli elementi coinvolti in quell'errore saranno evidenziati in rosso, figura \ref{fig:semanticTranslation_error}.
                 \begin{figure}[htbp]
                     \centering
-                    \includegraphics[scale=0.20]{Figure/semanticTranslation.PNG}
+                    \includegraphics[scale=0.25]{Figure/semanticTranslation.PNG}
                     \caption{TiveJS con la traduzione semantica di un diagramma entità-relazione mostrata in una console (sulla destra)}
                     \label{fig:semanticTranslation}
                 \end{figure}
 
                 \begin{figure}[htbp]
                     \centering
-                    \includegraphics[scale=0.20]{Figure/semanticTranslation_error.PNG}
+                    \includegraphics[scale=0.25]{Figure/semanticTranslation_error.PNG}
                     \caption{TiveJS con gli errori mostrati in una console (sulla destra)}
                     \label{fig:semanticTranslation_error}
                 \end{figure}

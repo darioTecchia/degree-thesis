@@ -1,7 +1,16 @@
-\chapter{Esempio d'utilizzo}
-    In questo capitolo illustro l'intero processo di progettazione del linguaggio, la creazione delle palette di simboli con DrawSE, la progettazione del diagramma e i risultati ottenuti dall'applicazione delle definizioni.
+﻿\chapter{Esempio d'utilizzo}
+    In questo capitolo illustro l'intero processo di progettazione del linguaggio, la creazione delle palette di simboli con DrawSE, la progettazione del diagramma e i risultati ottenuti dall'applicazione delle definizioni. Altro esempio d'utilizzo illustrato è quello in cui viene caricato un bundle di linguaggio\footnote{Insieme composto dal file della libreria di drawSE e dai file delle definizioni sintattiche e semantiche.} dal server.
 
-    \section{Entitiy Relationship}
+    \section{Bundle di Linguaggio}
+        Per caricare un bundle di linguaggio dal server inserisco all'interno dell'URL come parametri \texttt{loadLanguage} e il nome del bundle da caricare come valore del parametro. Ad esempio, inserendo il parametro \texttt{loadLanguage=er} verrà il caricato il bundle del liguaggio dalla cartella \textit{EXAMPLES/er}. All'interno della cartella \textit{er} devono essere presenti i seguenti file:
+        \begin{itemize}
+            \item \textit{library.xml} è la libreria dei simboli esportata con drawSE;
+            \item \textit{newDefinition.json} è file JSON contenente la definizione sintattica del linguaggio;
+            \item \textit{newSemanticDefinition.json} è il file JSON contenente la definizione semantica del linguaggio.
+        \end{itemize}.
+        \textit{EXAMPLES} risiede all'interno della directory principale di TiveJS.
+
+    \section{Entity Relationship}
         Nello specifico, illustro la creazione del linguaggio Entitiy Relationship.
 
         \subsection{Creazione Palette di simboli con DrawSE}
@@ -15,14 +24,14 @@
             TiveJS mi permette di importare la libreria creata con drawSE cliccando su \textit{File -> Open Library from -> Device...} Una volta importata comparirà nella barra laterale sinistra come mostrato in figura \ref{fig:library}.
             \begin{figure}[htbp]
                 \centering
-                \includegraphics[scale=0.5]{Figure/drawse/library.PNG}
+                \includegraphics[scale=0.6]{Figure/drawse/library.PNG}
                 \caption{Palette di simboli creata con DrawSE}
                 \label{fig:library}
             \end{figure}
             Trascinando i simboli all'interno dell'area di lavoro compongo la sentenza visiva ottenendo un diagramma come mostrato in figura \ref{fig:sentence}.
             \begin{figure}[htbp]
                 \centering
-                \includegraphics[scale=0.2]{Figure/drawse/sentence.PNG}
+                \includegraphics[scale=0.25]{Figure/drawse/sentence.PNG}
                 \caption{Diagramma ER}
                 \label{fig:sentence}
             \end{figure}
@@ -39,15 +48,15 @@
                 Come per quella sintattica, la specifica semantica viene definita attraverso un file JSON che rispetti lo schema illustrato nell'appendice \ref{appendix:semanticSchema}. Il risultato è mostrato nell'appendice \ref{appendix:erSemanticDefinition}.
 
         \subsection{Caricamento e Applicazione Definizioni}
-            Disegnato il diagramma e create le definizioni procedo con il caricamento di quest'ultime sulla piattaforma attraverso l'apposito menu illustrato in figura \ref{fig:tivemenu}.
+            Create le definizioni procedo con il caricamento di quest'ultime sulla piattaforma attraverso l'apposito menu illustrato in figura \ref{fig:tivemenu}.
 
             \subsubsection{Sintattiche}
-                Le definizioni sintattiche le carico cliccando su \textit{TiVE -> Load Rules...} e le applico cliccando su \textit{TiVE -> Apply Rules}
+                Le definizioni sintattiche le carico cliccando su \textit{TiVE -> Load Rules...} e le applico su un diagramma cliccando su \textit{TiVE -> Apply Rules}
                 \newline
                 Se tutte le regole vengono rispettate otterrò il risultato mostrato in figura \ref{fig:syntaxOK}.
                 \begin{figure}[htbp]
                     \centering
-                    \includegraphics[scale=0.2]{Figure/drawse/syntax_rule_OK.PNG}
+                    \includegraphics[scale=0.25]{Figure/drawse/syntax_rule_OK.PNG}
                     \caption{Applicazione delle definizioni sintattiche avvenuta con successo}
                     \label{fig:syntaxOK}
                 \end{figure}
@@ -55,7 +64,7 @@
                 Altrimenti otterrò il risultato mostrato in figura \ref{fig:syntaxNO}.
                 \begin{figure}[htbp]
                     \centering
-                    \includegraphics[scale=0.2]{Figure/drawse/syntax_rule_FAIL.PNG}
+                    \includegraphics[scale=0.25]{Figure/drawse/syntax_rule_FAIL.PNG}
                     \caption{Applicazione delle definizioni sintattiche fallita}
                     \label{fig:syntaxNO}
                 \end{figure}
@@ -68,7 +77,7 @@
                 Se il controllo sintattico va a buon fine l'algoritmo passa alla valutazione delle regole semantiche. Se tutto va a buon fine ottengo la traduzione semantica del diagramma, come mostrato in figura \ref{fig:semanticOK}
                 \begin{figure}[htbp]
                     \centering
-                    \includegraphics[scale=0.2]{Figure/drawse/semanticOK.PNG}
+                    \includegraphics[scale=0.25]{Figure/drawse/semanticOK.PNG}
                     \caption{Applicazione delle definizioni semantiche avvenuta con successo}
                     \label{fig:semanticOK}
                 \end{figure}
